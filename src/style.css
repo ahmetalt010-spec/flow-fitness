@@ -4,3 +4,21 @@
 .model3d{margin:0 0 18px}.model3d-canvas{height:285px;width:100%;overflow:hidden;border-radius:18px;background:#101d35;touch-action:none}.model3d-canvas canvas{display:block}.model3d-actions{display:flex;gap:10px;margin:10px 0}.model3d-actions button{background:#263d64;color:#fff;border:1px solid #4e78a7;border-radius:10px;padding:9px 14px;cursor:pointer}.model3d-note{display:block;color:#b5c8e4;line-height:1.45;margin-bottom:8px}.modal{max-height:92vh;overflow-y:auto}
 
 .movement-frame{width:100%;height:470px;border:1px solid #34445d;border-radius:18px;background:#111827}.movement-frame-wrap{width:100%;}.movement-note{font-size:12px;color:#a8bbd5;margin:9px 0 15px;line-height:1.5}@media(max-width:600px){.movement-frame{height:390px}}
+
+/* FLOW FITNESS V4 simplified exercise modal */
+.modal:has(.movement-frame-wrap){max-width:min(900px,96vw);width:100%;padding:18px;overflow-y:auto}
+.modal:has(.movement-frame-wrap)>.close{z-index:5;right:23px;top:21px}
+.movement-frame{height:min(66vh,600px);border-radius:14px;border:1px solid #314764;background:#090f18}
+.movement-viewer-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:0 54px 12px 2px;color:#f3f7ff}
+.movement-viewer-head button{border:1px solid #455a7b;background:#273959;color:white;padding:8px 12px;border-radius:9px;font-size:12px}
+.movement-note{text-align:center;margin:7px 0 11px;font-size:11px}
+.movement-summary{color:#c2ceeb;font-size:13px;margin:8px 0 14px}
+.movement-learn{border:1px solid #344665;border-radius:11px;margin:0 0 14px;padding:11px 14px;color:#e2eaff}
+.movement-learn summary{cursor:pointer;font-weight:700}
+.movement-learn p{margin:10px 0 0;font-size:13px}
+.movement-expanded{position:fixed;inset:8px;z-index:110;background:#151e34;border:1px solid #4a6183;border-radius:16px;padding:16px;display:flex;flex-direction:column}
+.movement-expanded .movement-frame{flex:1;min-height:0;height:auto}
+@media(max-width:600px){.modal:has(.movement-frame-wrap){padding:12px}.movement-frame{height:min(60vh,490px)}.movement-viewer-head{margin-right:48px}.movement-expanded{inset:3px;padding:10px}}
+
+/* V5 bilingual muscle-region discovery */
+.search-all{display:flex;align-items:center;gap:9px;color:#c7d3ed;font-size:13px;margin:0 0 14px}.search-all input{width:17px;height:17px;accent-color:#8b8cff}.region-chips{display:flex;gap:8px;overflow-x:auto;padding:4px 0 13px;scrollbar-width:thin}.region-chip{white-space:nowrap;background:#1d2c46;color:#d0ddf6;border:1px solid #3c4e6e;border-radius:999px;padding:9px 13px;font-size:12px}.region-chip.active{background:#5042a5;color:#fff;border-color:#b5a2ff}.search-count{color:#a5b5d0;font-size:12px;margin:0 0 13px}.model-pref{margin-top:20px}.model-pref .choice-row{margin-bottom:10px}.model-pref p{margin:0}.exercise-copy small{line-height:1.5}

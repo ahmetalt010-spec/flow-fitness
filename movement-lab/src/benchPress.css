@@ -101,3 +101,11 @@ body.bench-mode { background: #090f18; }
 
 body[data-exercise-surface="fitted"] .role-primary { background:#b94f5a; }
 body[data-exercise-surface="fitted"] .role-assist { background:#e4aaa1; }
+
+/* FLOW FITNESS V4: minimal embedded exercise viewer */
+html.flow-focus .bench-heading, html.flow-focus .bench-readout, html.flow-focus .bench-hint,
+html.flow-focus .language-picker, html.flow-focus .bench-back {display:none!important}
+html.flow-focus .bench-toolbar {bottom:12px!important;max-width:calc(100% - 20px)!important;width:auto!important;padding:7px!important;gap:5px!important;background:#111f2ee8!important}
+html.flow-focus .bench-toolbar #press-reset, html.flow-focus .bench-toolbar [data-press-view="head"],
+html.flow-focus .bench-toolbar label, html.flow-focus .bench-toolbar .bench-divider {display:none!important}
+html.flow-focus .bench-toolbar button {padding:9px 11px!important;font-size:12px!important}

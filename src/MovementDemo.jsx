@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Exercise3D from './Exercise3D.jsx';
 
 const MOVEMENT_IDS = {
@@ -27,11 +27,13 @@ const MOVEMENT_IDS = {
   "Leg Curl": "seated-leg-curl"
 };
 export default function MovementDemo({exercise,muscle}) {
+  const [expanded,setExpanded] = useState(false);
   const id = MOVEMENT_IDS[exercise];
   if (!id) return <div><Exercise3D exercise={exercise} muscle={muscle}/><p className="movement-note">Bu egzersiz için hazır doğrulanmış hareket eşleşmesi bulunamadı. Gösterilen model şematiktir.</p></div>;
-  return <div className="movement-frame-wrap">
+  return <div className={"movement-frame-wrap"+(expanded?" movement-expanded":"")}>
+    <div className="movement-viewer-head"><strong>{exercise}</strong><button type="button" onClick={()=>setExpanded(v=>!v)}>{expanded?"Küçült":"⛶ Büyüt"}</button></div>
     <iframe key={id} title={`${exercise} 3D egzersiz gösterimi`} loading="lazy" allowFullScreen
-      src={`/movement-lab/en/exercises/${id}/`} className="movement-frame" />
-    <p className="movement-note">3D modeli fareyle döndürebilir, hareketi oynatıp durdurabilir ve hızını ayarlayabilirsin. Gösterim: Movement Lab. Bazı benzer egzersizler aynı animasyonu kullanır.</p>
+      src={`/movement-lab/en/exercises/${id}/?flowFocus=1`} className="movement-frame" />
+    <p className="movement-note">Modeli sürükleyerek döndür · Hareketi durdur veya oynat</p>
   </div>;
 }

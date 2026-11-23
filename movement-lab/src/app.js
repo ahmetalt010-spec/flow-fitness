@@ -3,6 +3,7 @@ import { localeRedirect } from './localePreference.js'
 import { resolveRoute } from './routes.js'
 import { applyPageMetadata } from './pageMeta.js'
 const route = resolveRoute(location.href, import.meta.env.BASE_URL)
+if (new URLSearchParams(location.search).get('flowFocus') === '1') document.documentElement.classList.add('flow-focus')
 let savedLocale
 try { savedLocale = localStorage.getItem('movement.locale') } catch {}
 const redirect = localeRedirect(location.href, {
