@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
-    "build": "vite build",
+    "build": "vite build && npm --prefix movement-lab ci --no-audit --no-fund && npm --prefix movement-lab run build && node scripts/copy-movement.mjs",
     "preview": "vite preview --host 0.0.0.0"
   },
   "dependencies": {
